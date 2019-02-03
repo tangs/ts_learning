@@ -17,4 +17,29 @@ const fun = () => {
     const {a: a1} = o;
     console.log(a1);
 };
+
+const fun1 = () => {
+    const f = [1, 2];
+    const s = [3, 4];
+    const b = [0, ...f, ...s, 5];
+    console.log(b);
+
+    const o1 = {
+        a: 'a',
+        b: 10,
+        c: 'c'
+    };
+    const o2 = {
+        c: 30,
+        d: 'd',
+        e: 30
+    };
+    const o3 = {
+        ...o1,
+        ...o2
+    };
+    console.log(o3);
+};
+
 fun();
+fun1();
