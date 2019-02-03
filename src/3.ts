@@ -9,8 +9,14 @@ func3_1(o);
 
 interface inter3_1 {
     txt: string;
-    a?: number
+    a?: number;
+    b?: number;
 };
+
+interface inter3_2 {
+    readonly x: number;
+    readonly y: number;
+}
 
 const func3_2 = (obj: inter3_1) => {
     console.log(obj.txt);
@@ -18,5 +24,8 @@ const func3_2 = (obj: inter3_1) => {
         console.log(obj.a);
     }
 };
-func3_2({txt: 'ddd'});
+func3_2({txt: 'ddd', b: 4});
 func3_2({txt: 'ddd', a: 33});
+const obj: inter3_1 = {txt: 'ddd'};
+// obj.bd = '33';
+func3_2(obj);
