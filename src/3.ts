@@ -36,24 +36,30 @@ func3_2(obj1);
 console.log(typeof obj1);
 
 class Animal {
-    name: string;
+    name: string = 'Animal';
 }
 
 class Dog extends Animal {
-    breed: string;
+    breed: string = 'breed';
 }
 
 interface inter3_3 {
     [x: string]: Animal;
     [x: number]: Dog;
+    1: Dog;
+    aa: Animal;
 }
 
 const func3_3 = (arr: inter3_3) => {
     console.log(arr[1].breed);
-    console.log(arr['2'].name);
+    console.log(arr.aa.name);
 };
-// const arr1: Array<inter3_3>;
-// func3_3(arr);
+const arr1: inter3_3 = {
+    1: new Dog(),
+    aa: new Animal(),
+    bb: new Animal(),
+};
+func3_3(arr1);
 
 interface NumberDic {
     [index: string]: number;
