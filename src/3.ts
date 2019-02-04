@@ -12,12 +12,12 @@ interface inter3_1 {
     a?: number;
     b?: number;
     // [a: string]: any;
-};
+}
 
 interface inter3_2 {
     readonly x: number;
     readonly y: number;
-};
+}
 
 const func3_2 = (obj: inter3_1) => {
     console.log(obj.txt);
@@ -34,3 +34,29 @@ func3_2(obj);
 let obj1 = {txt: 'ddd', ddd: 333};
 func3_2(obj1);
 console.log(typeof obj1);
+
+class Animal {
+    name: string;
+}
+
+class Dog extends Animal {
+    breed: string;
+}
+
+interface inter3_3 {
+    [x: string]: Animal;
+    [x: number]: Dog;
+}
+
+const func3_3 = (arr: inter3_3) => {
+    console.log(arr[1].breed);
+    console.log(arr['2'].name);
+};
+// const arr1: Array<inter3_3>;
+// func3_3(arr);
+
+interface NumberDic {
+    [index: string]: number;
+    length: number;
+    // name: string;
+}
