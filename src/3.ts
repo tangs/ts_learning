@@ -17,7 +17,7 @@ interface inter3_1 {
 interface inter3_2 {
     readonly x: number;
     readonly y: number;
-}
+};
 
 const func3_2 = (obj: inter3_1) => {
     console.log(obj.txt);
