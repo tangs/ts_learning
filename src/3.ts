@@ -64,5 +64,5 @@ func3_3(arr1);
 interface NumberDic {
     [index: string]: number;
     length: number;
-    // name: string;
+    name: number;
 }
