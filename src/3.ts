@@ -65,4 +65,11 @@ interface NumberDic {
     [index: string]: number;
     length: number;
     name: number;
+    2: number;
+}
+
+interface inter3_4 {
+    [index: number]: number;
+    name: string;
+    2: number;
 }
