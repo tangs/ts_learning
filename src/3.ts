@@ -73,3 +73,11 @@ interface inter3_4 {
     name: string;
     2: number;
 }
+
+interface Point {
+    readonly x: number;
+    readonly y?: number;
+}
+
+let pos: Point = {x: 3};
+// pos.y = 3;
