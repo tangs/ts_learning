@@ -81,3 +81,18 @@ interface Point {
 
 let pos: Point = {x: 3};
 // pos.y = 3;
+
+let num3_1: number[] = [1, 2, 3, 5];
+let ro: ReadonlyArray<number> = num3_1;
+console.log("before:");
+ro.forEach(element => {
+    console.log(element);
+});
+// ro.push()
+let num3_3 = ro as number[];
+num3_3.push(7);
+num3_3.push(10);
+console.log("after:");
+ro.forEach(element => {
+    console.log(element);
+});
