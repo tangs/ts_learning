@@ -109,3 +109,31 @@ const func3_4 = (func: inter_func) => {
 func3_4((num: number, str: string) => {
     return num.toString() === str;
 });
+
+interface inter3_5 {
+    num: number;
+    str: string;
+}
+
+interface inter3_6 {
+    num: number;
+    str1: number;
+}
+
+class Class3_1 implements inter3_5, inter3_6 {
+    public num: number;
+    public str: string;
+    public str1: any;
+}
+
+const func3_6 = (obj: inter3_6) => {
+    console.log(typeof(obj.str1));
+}
+
+const cls: Class3_1 = new Class3_1();
+cls.num = 3;
+cls.str1 = 33;
+cls.str1 = '33';
+const inter = cls as inter3_6;
+// console.log(typeof(inter.str1));
+func3_6(inter);
