@@ -96,3 +96,16 @@ console.log("after:");
 ro.forEach(element => {
     console.log(element);
 });
+
+interface inter_func {
+    (num: number, str: string): boolean;
+}
+
+const func3_4 = (func: inter_func) => {
+    const ret = func(33, '33');
+    console.log(`ret:${ret}`);
+}
+
+func3_4((num: number, str: string) => {
+    return num.toString() === str;
+});
