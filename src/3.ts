@@ -137,3 +137,36 @@ cls.str1 = '33';
 const inter = cls as inter3_6;
 // console.log(typeof(inter.str1));
 func3_6(inter);
+
+interface inter3_7 {
+    new (w: number, h: number): inter3_8;
+}
+
+interface inter3_8 {
+    func();
+}
+
+const func_3_7 = (ctor: inter3_7, w: number, h: number): inter3_8 => {
+    return new ctor(w, h);
+}
+
+class class3_2  implements inter3_8 {
+    constructor (w: number, h: number) {
+    }
+
+    public func() {
+        console.log('beep.');
+    }
+}
+
+class class3_3  implements inter3_8 {
+    // constructor (w: number, h: number) {
+    // }
+
+    public func() {
+        console.log('tick.');
+    }
+}
+
+const dig = func_3_7(class3_2, 10, 30);
+const dig1 = func_3_7(class3_3, 10, 30);
