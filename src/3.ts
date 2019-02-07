@@ -147,7 +147,9 @@ interface inter3_8 {
 }
 
 const func_3_7 = (ctor: inter3_7, w: number, h: number): inter3_8 => {
-    return new ctor(w, h);
+    const obj: inter3_8 = new ctor(w, h);
+    obj.func();
+    return obj;
 }
 
 class class3_2  implements inter3_8 {
