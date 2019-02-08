@@ -162,8 +162,8 @@ class class3_2  implements inter3_8 {
 }
 
 class class3_3  implements inter3_8 {
-    // constructor (w: number, h: number) {
-    // }
+    constructor (w: number, h: number) {
+    }
 
     public func() {
         console.log('tick.');
