@@ -27,7 +27,7 @@ const fun1 = () => {
     const o1 = {
         a: 'a',
         b: 10,
-        c: 'c'
+        c: 'd'
     };
     const o2 = {
         c: 30,
