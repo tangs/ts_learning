@@ -27,8 +27,8 @@ x = [1, '33', 3];
 console.log(num1);
 
 enum Color {Red, Green, Blue};
-let c: string = Color[2];
-let c1: Color = Color.Blue;
+const c: string = Color[2];
+const c1: Color = Color.Blue;
 console.log(c);
 console.log(Color.Blue);
 console.log(c1.toString());
