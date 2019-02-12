@@ -31,7 +31,7 @@ const obj: inter3_1 = {txt: 'ddd'};
 // obj.fff = 3;
 // obj.bd = '33';
 func3_2(obj);
-let obj1 = {txt: 'ddd', ddd: 333};
+const obj1 = {txt: 'ddd', ddd: 333};
 func3_2(obj1);
 console.log(typeof obj1);
 
