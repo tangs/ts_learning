@@ -61,3 +61,24 @@ class F {
 
 const f = new F('tangs');
 console.log(`name:${f.name}`);
+
+class G {
+    public static Value: string = 'Value1';
+    public getValue(): string {
+        return G.Value;
+    }
+}
+
+const GClass: typeof G = G;
+
+const g1: G = new GClass();
+console.log(`Value:${g1.getValue()}`);
+GClass.Value = 'Value2';
+
+const g2: G = new G();
+console.log(`Value:${g2.getValue()}`);
+console.log('typeof:' + (typeof G));
+
+const func_G = G;
+const g3: G = new func_G();
+console.log(`Value:${g3.getValue()}`);
