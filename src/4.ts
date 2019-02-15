@@ -40,3 +40,15 @@ class D {
 const d = new D();
 d.name = 'tangs';
 const name1 = d.name;
+
+class E {
+    readonly name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+const e = new E('tangs');
+console.log(`name:${e.name}`);
+// e.name = '33';
