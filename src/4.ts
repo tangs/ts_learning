@@ -52,3 +52,12 @@ class E {
 const e = new E('tangs');
 console.log(`name:${e.name}`);
 // e.name = '33';
+
+class F {
+    constructor(readonly name: string) {
+
+    }
+}
+
+const f = new F('tangs');
+console.log(`name:${f.name}`);
