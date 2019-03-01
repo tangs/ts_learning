@@ -8,7 +8,12 @@
         // "outFile":"./dest/index.js",
         "outDir":"./build",     //重定向输出目录。   
         "allowJs": true,
-        "watch":true            //在监视模式下运行编译器。会监视输出文件，在它们改变时重新编译。
+        "watch": true,            //在监视模式下运行编译器。会监视输出文件，在它们改变时重新编译。
+        "plugins": [
+            {
+              "name": "typescript-tslint-plugin"
+            }
+          ]
     },
     "include":[
         "./src/**/*"

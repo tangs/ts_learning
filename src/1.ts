@@ -1,13 +1,13 @@
-console.log("var:");
-for(var i = 0; i < 4; ++i) {
-    for(var i = 0; i < 4; ++i) {
+console.log('var:');
+for (var i = 0; i < 4; ++i) {
+    for (var i = 0; i < 4; ++i) {
         console.log(i);
     }
 }
 
-console.log("let:");
-for(let i = 0; i < 4; ++i) {
-    for(let i = 0; i < 4; ++i) {
+console.log('let:');
+for (let i = 0; i < 4; ++i) {
+    for (let i = 0; i < 4; ++i) {
         console.log(i);
     }
 }
@@ -26,7 +26,7 @@ let x: [number, string, number];
 x = [1, '33', 3];
 console.log(num1);
 
-enum Color {Red, Green, Blue};
+enum Color { Red, Green, Blue };
 const c: string = Color[2];
 const c1: Color = Color.Blue;
 console.log(c);
