@@ -22,3 +22,13 @@
     console.log(obj);
     console.log(obj1);
 }
+
+{
+    const func = function <T>(arg: T): T {
+        return arg;
+    }
+    const t: {<T>(arg: T): T} = func;
+    const t1: {<Number>(arg: Number): Number} = func;
+    console.log(t(111));
+    console.log(t1('ff123456'));
+}
