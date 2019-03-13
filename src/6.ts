@@ -34,14 +34,16 @@
 }
 
 {
-    interface Inter {
-        <T>(arg: T): T;
+    interface Inter<T> {
+        (arg: T): T;
     }
 
     const func = <T>(arg: T): T => {
         return arg;
     }
 
-    const func1: Inter = func;
+    const func1: Inter<Number> = func;
     console.log(func1(111));
+    const func2: Inter<string> = func;
+    console.log(func2('222'));
 }
