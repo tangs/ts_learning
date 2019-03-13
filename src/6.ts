@@ -32,3 +32,16 @@
     console.log(t(111));
     console.log(t1('ff123456'));
 }
+
+{
+    interface Inter {
+        <T>(arg: T): T;
+    }
+
+    const func = <T>(arg: T): T => {
+        return arg;
+    }
+
+    const func1: Inter = func;
+    console.log(func1(111));
+}
