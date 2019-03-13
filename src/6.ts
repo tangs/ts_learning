@@ -1,9 +1,9 @@
-{
-    function func1111() {
-        console.log('call func1111().');
-    }
-}
-func1111();
+// {
+//     function func1111() {
+//         console.log('call func1111().');
+//     }
+// }
+// func1111();
 
 {
     function func<T>(arg: T) {
