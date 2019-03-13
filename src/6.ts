@@ -141,3 +141,54 @@
     console.log(func(obj, 'a'));
     // console.log(func(obj, 'd'));
 }
+
+{
+    class A {
+        x: number;
+        constructor(x: number) {
+            this.x = x;
+        }
+    }
+    class B1 extends A {
+
+    }
+    class C {
+
+    }
+    const create = <T extends A>(c: new(x: number) => T, x: number): T => {
+        return new c(x);
+    };
+    const a = create(A, 123);
+    // a.x = 3330;
+    console.log(a.x);
+}
+
+{
+    class BeeKeeper {
+        hasMask: boolean;
+    }
+    
+    class ZooKeeper {
+        nametag: string;
+    }
+    
+    class Animal {
+        numLegs: number;
+    }
+    
+    class Bee extends Animal {
+        keeper: BeeKeeper;
+    }
+    
+    class Lion extends Animal {
+        keeper: ZooKeeper;
+    }
+    
+    const create = <A extends Animal>(c: new () => A): A => {
+        return new c();
+    }
+    
+    // create(Lion).keeper.nametag;  // typechecks!
+    // create(Bee).keeper.hasMask;   // typechecks!
+    // const ani = create(Animal);
+}
