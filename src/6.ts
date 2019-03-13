@@ -107,3 +107,28 @@
     console.log(func1(new C(1, 2, 3)));
     console.log(func1(new B(5, 6, 7)));
 }
+
+{
+    interface Inter {
+        readonly x: number;
+        readonly y?: number;
+    }
+
+    class Class1 implements Inter {
+        x: number;
+
+        constructor(x: number) {
+            this.x = x;
+        }
+    };
+
+    const func = <T extends Inter>(t: T) => {
+        return t.x;
+    };
+    const ins = new Class1(444);
+    ins.x = 33;
+    console.log(func(ins));
+    const obj: Inter = {x: 123};
+    // obj.x = 3;
+    console.log(func(obj));
+}
