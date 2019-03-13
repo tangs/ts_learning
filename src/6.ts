@@ -132,3 +132,12 @@
     // obj.x = 3;
     console.log(func(obj));
 }
+
+{
+    const func = <T, K extends keyof T >(obj: T, key: K) => {
+        return obj[key];
+    }
+    const obj = { a: 1, b: 2, c: 3};
+    console.log(func(obj, 'a'));
+    // console.log(func(obj, 'd'));
+}
