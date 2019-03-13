@@ -1,0 +1,13 @@
+{
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "vue",
+        "typescript",
+        "typescriptreact"
+    ],
+    "editor.detectIndentation": false,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all"
+}
