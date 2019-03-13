@@ -47,3 +47,14 @@
     const func2: Inter<string> = func;
     console.log(func2('222'));
 }
+
+{
+    interface Inter<T, U> {
+        (arg1: T, arg2: U): string;
+    }
+    const func = <T, U>(arg1: T, arg2: U) => {
+        return arg1.toString() + arg2.toString();
+    }
+    const func1: Inter<number, string> = func;
+    console.log(func1(11, '222'));
+}
