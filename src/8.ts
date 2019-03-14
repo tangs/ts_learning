@@ -61,6 +61,7 @@
     // };
     const a = new A();
     console.log(a instanceof A);
+    console.log(typeof a);
     // let b = { a: 1 };
     // fun(b);
 }
