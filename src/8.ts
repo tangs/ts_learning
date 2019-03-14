@@ -18,7 +18,7 @@
     //     (arg1: Number): string;
     // }
     class A {
-        func(callback: {(arg1: Number): boolean}): void {
+        func(callback: (arg1: Number) => boolean): void {
             console.log(callback(111));
         }
     }
@@ -27,4 +27,20 @@
         console.log(a);
         return true;
     });
+}
+
+{
+    class A {
+        public x: number;
+    }
+    class B {
+        y: number;
+        public x: number;
+    }
+
+    let a = new A();
+    let b = new B();
+    a = b;
+    // b = a;
+    console.log(a);
 }
