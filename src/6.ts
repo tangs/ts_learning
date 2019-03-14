@@ -82,7 +82,7 @@
             this.z = z;
         }
         public toString(): string {
-            return `x=${this.x}, y=${this.y}, z=${this.z},`;
+            return `x=${this.x}, y=${this.y}, z=${this.z}.`;
         }
     }
 
@@ -93,7 +93,7 @@
             this.a = a;
         }
         public toString(): string {
-            return `x=${this.x}, y=${this.y}, a=${this.a},`;
+            return `x=${this.x}, y=${this.y}, a=${this.a}.`;
         }
     }
 
