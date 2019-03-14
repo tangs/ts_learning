@@ -33,7 +33,20 @@
     const func = (): A | B => {
         return new B(10, 20);
     };
+    const isB = (obj: A | B): obj is B => {
+        return obj instanceof B;
+    };
     let a: A | B = new A(1, 2);
     a = func();
     console.log(a.x);
+    if (a instanceof B) {
+        console.log(a.z);
+    } else {
+        console.log(a.y);
+    }
+    if (isB(a)) {
+        console.log(a.z);
+    } else {
+        console.log(a.y);
+    }
 }
