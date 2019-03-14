@@ -5,6 +5,7 @@
         B,
         C,
         D = 2,
+        // E = 'dd',
     }
 
     if (a) {
@@ -23,4 +24,5 @@
     };
     func(Enum);
     func({ A: 333 });
+    console.log(Enum[Enum.A] === 'A');
 }
