@@ -44,3 +44,23 @@
     // b = a;
     console.log(a);
 }
+
+{
+    interface Inter {
+        y: number;
+    }
+    interface Inter1 {
+        x: number;
+    }
+    class A implements Inter, Inter1 {
+        x: number;
+        y: number;
+    }
+    // const fun = (i: Inter) => {
+
+    // };
+    const a = new A();
+    console.log(a instanceof A);
+    // let b = { a: 1 };
+    // fun(b);
+}
