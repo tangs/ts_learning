@@ -86,8 +86,27 @@
     interface Inter2 {
         type: 'type2';
     }
-    const func = (a: Inter1 | Inter2): string => {
+    type Type1 = Inter1 | Inter2;
+    const func = (a: Type1): string => {
         return a.type;
     };
     console.log(func({ type: 'type2' }));
+}
+
+{
+    const assertNever = (x: never): never => {
+        throw new Error('Unexpected obj:' + x);
+    };
+    type Type1 = 1 | 2 | 3;
+    const func = (x: Type1) => {
+        switch (x) {
+            case 1:
+            case 2:
+            case 3:
+                return x;
+            default:
+                return assertNever(x);
+        }
+    };
+    console.log(func(3));
 }
