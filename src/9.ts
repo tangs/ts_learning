@@ -110,3 +110,16 @@
     };
     console.log(func(3));
 }
+
+{
+    const pluck = <T, K extends keyof T>(obj: T, keys: K[]): T[K][] => {
+        return keys.map(key => obj[key]);
+    };
+    const obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4
+    };
+    console.log(pluck(obj, ['a', 'b']));
+}
