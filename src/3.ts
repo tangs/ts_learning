@@ -174,7 +174,7 @@
     const dig = func_3_7(class3_2, 10, 30);
     const dig1 = func_3_7(class3_3, 10, 30);
     const dig2 = func_3_7(class3_3, 22, 30);
-    const {a1, b} = {a1: 3, b: 4};
+    const { a1, b } = {a1: 3, b: 4};
 
     var d = 3;
 }
