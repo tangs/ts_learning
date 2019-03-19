@@ -21,5 +21,7 @@ module.exports = {
         //         flatTernaryExpressions: true
         //     }
         // ]
+
+        'typescript/no-namespace': false
     }
 };

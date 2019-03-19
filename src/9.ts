@@ -123,3 +123,23 @@
     };
     console.log(pluck(obj, ['a', 'b']));
 }
+
+{
+    type Type1 = '1' | '2';
+    type Type2 = { [K in Type1]: boolean };
+    const obj: Type2 = { 1: true, 2: false };
+    console.log(obj);
+}
+
+{
+    class P {
+        x: number;
+        y: string;
+    }
+    type T1 = {[K in keyof P]: P[K]};
+    type T2<T> = {[K in keyof T]: T[K]};
+    const t: T1 = { x: 33, y: '33' };
+    const t1: T2<P> = { x: 21, y: '12' };
+    console.log(t);
+    console.log(t1);
+}

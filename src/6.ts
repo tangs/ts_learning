@@ -6,7 +6,7 @@
 // func1111();
 
 {
-    function func<T>(arg: T) {
+    function func111<T>(arg: T) {
         return arg.toString();
     }
 
@@ -14,7 +14,7 @@
         return args.length;
     }
 
-    console.log(func('dddd'));
+    console.log(func111('dddd'));
     console.log(func1([1, 2, 3]));
 }
 
