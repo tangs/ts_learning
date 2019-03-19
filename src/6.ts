@@ -128,7 +128,7 @@
     const ins = new Class1(444);
     ins.x = 33;
     console.log(func(ins));
-    const obj: Inter = {x: 123};
+    const obj: Inter = { x: 123 };
     // obj.x = 3;
     console.log(func(obj));
 }
@@ -136,8 +136,8 @@
 {
     const func = <T, K extends keyof T >(obj: T, key: K) => {
         return obj[key];
-    }
-    const obj = { a: 1, b: 2, c: 3};
+    };
+    const obj = { a: 1, b: 2, c: 3 };
     console.log(func(obj, 'a'));
     // console.log(func(obj, 'd'));
 }
@@ -155,8 +155,8 @@
     class C {
 
     }
-    const create = <T extends A>(c: new(x: number) => T, x: number): T => {
-        return new c(x);
+    const create = <T extends A>(C1: new(x: number) => T, x: number): T => {
+        return new C1(x);
     };
     const a = create(A, 123);
     // a.x = 3330;
@@ -167,27 +167,27 @@
     class BeeKeeper {
         hasMask: boolean;
     }
-    
+
     class ZooKeeper {
         nametag: string;
     }
-    
+
     class Animal {
         numLegs: number;
     }
-    
+
     class Bee extends Animal {
         keeper: BeeKeeper;
     }
-    
+
     class Lion extends Animal {
         keeper: ZooKeeper;
     }
-    
-    const create = <A extends Animal>(c: new () => A): A => {
-        return new c();
-    }
-    
+
+    const create = <A extends Animal>(C1: new () => A): A => {
+        return new C1();
+    };
+
     // create(Lion).keeper.nametag;  // typechecks!
     // create(Bee).keeper.hasMask;   // typechecks!
     // const ani = create(Animal);
