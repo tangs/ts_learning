@@ -1,9 +1,9 @@
-namespace TS {
-    export class A {
-        x: number;
-        y: number;
-    }
-}
+// namespace TS {
+//     export class A {
+//         x: number;
+//         y: number;
+//     }
+// }
 {
     const a = new TS.A();
     a.x = 10;

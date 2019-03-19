@@ -1,6 +1,6 @@
-// namespace TS {
-//     export class A {
-//         x: number;
-//         y: number;
-//     }
-// }
+namespace TS {
+    export class A {
+        x: number;
+        y: number;
+    }
+}
